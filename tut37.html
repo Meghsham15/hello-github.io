@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Transitions </title>
+    <style>
+        body{
+            background-color: black;
+        }
+
+        #box{
+            display: flex;
+            height: 50px;
+            width: 50px;
+            border-radius: 23px;
+            background-color: red;
+            justify-content: center;
+            align-items: center;
+            transition-property: background-color;        /* Its background color will get the transition  */
+            transition-duration: 2s;                         /* The transition will work for 2s  */
+            transition-timing-function: ease-in;     /* Ease in ease out can transition timing functions can also be used  */
+            transition-delay: 2s;                   /* It will give delay before staring the transition  */
+
+            /* Short hand Property (We can give all these properties in one line of code ):- */
+
+            /* transition: background-color transition-duration transition-timing-function transition-delay; */
+            /* EG:-  */
+
+            transition: background-color 2s ease-in 1s;
+
+            /* We can give this transition effect to all the properties mentioned in the Box:hover section  */
+
+            transition: all 1s ease-in-out .3s;
+            /* Using this we can transition all the properties by mentioning them in the hover box  */
+            /* Properties with value and color can be transitioned binary properties can not be transitioned   */
+
+        }
+
+        #box:hover{
+            background-color: white;
+            height: 40px;
+            width: 400px;
+            border-radius: 100px;
+            box-shadow: 5px 4px 4px 3px cyan;
+            font-size: 25px;
+
+        }
+
+    </style>
+</head>
+<body>
+    <h3>This is CSS Transition tutorial</h3>
+    <div class="container"></div>
+    <div id="box">
+        Hello insane_boi_mj_ over here
+    </div>
+</body>
+</html>
